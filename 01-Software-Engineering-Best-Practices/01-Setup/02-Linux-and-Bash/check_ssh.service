@@ -1,0 +1,8 @@
+[Unit]
+Description=Checking connection
+
+[Service]
+ExecStart=/bin/bash /usr/local/check_ssh.sh
+
+[Install]
+WantedBy=multi-user.target

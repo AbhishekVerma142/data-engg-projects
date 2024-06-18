@@ -1,0 +1,12 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.14, pytest-7.3.2, pluggy-1.0.0 -- /home/abhiv/code/AbhishekVerma142/data-engineering-challenges/01-Software-Engineering-Best-Practices/02-Python-For-Data-Engineering/02-Image-transformation/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/abhiv/code/AbhishekVerma142/data-engineering-challenges/01-Software-Engineering-Best-Practices/02-Python-For-Data-Engineering/02-Image-transformation
+plugins: mock-3.11.1
+collecting ... collected 3 items
+
+tests/test_process.py::TestImageProcessing::test_get_image_paths PASSED  [ 33%]
+tests/test_process.py::TestImageProcessing::test_process_image PASSED    [ 66%]
+tests/test_process.py::TestImageProcessing::test_write_image PASSED      [100%]
+
+========================= 3 passed, 1 warning in 2.16s =========================
