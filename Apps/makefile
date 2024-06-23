@@ -3,3 +3,6 @@ commit_message:
 
 push_github:
 	git push origin master
+
+pull_master:
+	git pull origin master
