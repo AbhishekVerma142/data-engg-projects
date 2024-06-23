@@ -1,13 +1,3 @@
-rmdir -r fast_app
-rmdir fast_app
-poetry new fast_app
-poetry add fastapi uvicorn
-cd fast_app
-ls
-poetry add fastapi uvicorn
-ls
-touch fast_app/main.py
-cd ..
 poetry new fast_app
 poetry add fastapi uvicorn
 cd fast_app
@@ -16,22 +6,16 @@ poetry add fastapi uvicorn
 ls
 dir
 touch fast_app/main.py
-poetry run uvicorm fast_app.main:app
 poetry run uvicorn fast_app.main:app
 dir
 tree
 docker build .
 clear
-history
-free
-clear
 docker images
 docker build -t fast .
 docker images
-clear
 docker run fast
 docker ps
-docker stop
 docker stop 827587c03184
 docker stop $(docker ps -q)
 docker run -p -p 8080:8000 fast
@@ -39,10 +23,8 @@ docker run -p 8080:8000 fast
 docker ps
 docker exec -it 10482b89e60d /bin/bash
 docker ps
-docker run --rm -i hadolint/hadolint < Dockerfile o
-docker run --rm -i hadolint/hadolint < Dockerfile 
+docker run --rm -i hadolint/hadolint < Dockerfile
 docker images
-clear
 docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dice:latest fast
 docker login
 docker run --rm -it -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dice:latest fast
@@ -56,31 +38,21 @@ docker run -it -v bind_volume:bind_volume fast /bin/bash
 docker run -it -v bind_volume:/app/bind_volume fast /bin/bash
 clear
 pwd
-docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp/api/fast:0.1      
+docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp/api/fast:0.1
 docker push $_
-docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp/api/fast:0.1      
+docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp/api/fast:0.1
 docker push $_
-docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp-424410/api/fast:0.1      
+docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp-424410/api/fast:0.1
 docker push $_
-clear
 docker build -t fast .
 docker run fast
 docker run -e PORT=8000 fast
 docker kill $(docker ps -q)
 docker ps
 docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp-424410/api/fast:0.2
-docker push$_
 docker push $_
 docker images
 docker push $_
-docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp-424410/api/fast:0.2
-docker push $_
-gcloud run deploy fast-app \\n--image europe-west1-docker.pkg.dev/wagon-bootcamp-424410/docker-hub/fast \ 
-gcloud run deploy fast-app --image europe-west1-docker.pkg.dev/wagon-bootcamp-424410/docker-hub/fast --region=europe-west1 --aloow-unauthenticated
-gcloud run deploy fast-app --image europe-west1-docker.pkg.dev/wagon-bootcamp-424410/docker-hub/fast --region=europe-west1 --allow-unauthenticated
-gcloud run deploy fast-app --image europe-west1-docker.pkg.dev/de-bootcamp/docker-hub/fast --region=europe-west1 --allow-unauthenticated
-gcloud run deploy fast-app --image europe-west1-docker.pkg.dev/wagon-bootcamp-424410/api/fast --region=europe-west1 --allow-unauthenticated
-docker images
 docker tag fast europe-west1-docker.pkg.dev/wagon-bootcamp-424410/docker-hub/fast:0.2
 docker push $_
 gcloud run deploy fast-app --image europe-west1-docker.pkg.dev/wagon-bootcamp-424410/docker-hub/fast --region=europe-west1 --allow-unauthenticated
@@ -88,14 +60,9 @@ gcloud run deploy fast-app --image fast --region=europe-west1 --allow-unauthenti
 gcloud run deploy fast-app --image europe-west1-docker.pkg.dev/wagon-bootcamp-424410/docker-hub/fast:0.2 --region=europe-west1 --allow-unauthenticated\n
 git status
 git add .
-git status
 cd ..
 git status
 git commit -m"fast app using docker and deploy across cloud run"
-git push
 git push origin master
 gh browse
-fc -ln -20
-fc -ln -50
-fc -ln -70
-fc -ln -100
+fc -ln -100 >> fast_app_cmds.txt
