@@ -1,5 +1,5 @@
 commit_message:
 	git commit -m"Updates"
 
-github_push:
+push_github:
 	git push origin master
