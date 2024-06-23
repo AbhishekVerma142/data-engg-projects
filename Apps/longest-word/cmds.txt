@@ -1,0 +1,84 @@
+#extracted using fc -ln <line_numbers> >> <>.txt
+cd 01-Software-Engineering-Best-Practices/03-Best-Practices/03-Continuous-Integration
+cd ~/code/<user.github_nickname>/longest-word
+cd ~/code/AbhishekVerma142/longest-word
+git init
+git status
+git add .
+git commit -m "Game development with TDD"
+git repo create --public --source=.
+gh repo create --public --source=.
+git push origin master
+code  .
+mkdir -p .github/workflows
+touch .github/workflows/.python-ci.yml
+git add .github
+git commit -m "Configure Github Actions CI to run pytest"
+git push origin master
+gh brwose
+gh run watch
+git checkout -b dictionary-api
+git add tests/test_game.py
+git commit -m "TDD: Check that attempt exists in the English dictionary"
+git push origin dictionary-api
+gh pr create --web
+poetry run pytest -k test_unknown_word_is_invalid
+pip install requests
+poetry run pytest -k test_unknown_word_is_invalid
+poetry add requests
+poetry run pytest -k test_unknown_word_is_invalid
+git add .
+git commit -m "Feature complete: Dictionary check of attempt"
+git push origin dictionary-api
+gh run watch
+git branch -d dictionary-api
+git checkout master
+git branch -D dictionary-api
+git status
+cd ~/code/AbhishekVerma142/data-engineering-challenges/
+git status
+git pull upstream main -X ours\n
+cd 01-Software-Engineering-Best-Practices/03-Best-Practices/04-Continuous-Deployment
+code .
+cd ~/code/AbhishekVerma142/longest-word
+git status
+git checkout master
+git pull origin master
+git checkout -b http-server
+poetry add flask
+touch wsgi.py
+code .
+FLASK_DEBUG=true poetry run flask run
+mkdir static
+touch static/style.css
+mkdir templates
+touch templates/home.html
+FLASK_DEBUG=true poetry run flask run
+touch templates/check.html
+git add .
+git commit -m "Small web app wrapper around the Game"
+git push origin http-server
+gh pr create --web
+FLASK_DEBUG=true poetry run flask run
+git checkout master
+git status
+git add .
+git commit -m"add"
+git push --set-upstream origin http-server
+gh pr create --web
+git checkout master
+ls
+touch main.py
+git pull origin master
+poetry export --without-hashes --output requirements.txt
+touch app.yaml
+gcloud app deploy
+touch .github/workflows/.app-engine-cd.yml
+git checkout -b yellow-letter
+FLASK_ENV=development poetry run flask run
+git add static/style.css\ngit commit -m "Change letter grid background-color to yellow"\ngit push origin yellow-letter
+git checkout master
+git status
+git add .
+git commit -m"app deploy"
+git push origin master

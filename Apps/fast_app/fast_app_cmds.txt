@@ -1,3 +1,4 @@
+##extracted using fc -ln <line_numbers> >> <>.txt
 poetry new fast_app
 poetry add fastapi uvicorn
 cd fast_app
