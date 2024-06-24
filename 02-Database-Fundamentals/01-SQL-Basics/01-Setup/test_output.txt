@@ -1,0 +1,11 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.14, pytest-7.4.0, pluggy-1.2.0 -- /home/abhiv/code/AbhishekVerma142/data-engineering-challenges/02-Database-Fundamentals/01-SQL-Basics/01-Setup/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/abhiv/code/AbhishekVerma142/data-engineering-challenges/02-Database-Fundamentals/01-SQL-Basics/01-Setup
+collecting ... collected 3 items
+
+tests/test_queries.py::test_actor_query PASSED                           [ 33%]
+tests/test_queries.py::test_rentals PASSED                               [ 66%]
+tests/test_queries.py::test_montly_revenue PASSED                        [100%]
+
+============================== 3 passed in 0.13s ===============================
