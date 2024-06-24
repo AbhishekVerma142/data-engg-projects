@@ -1,0 +1,45 @@
+cd ~/code/AbhishekVerma142/data-engineering-challenges/
+git status
+git pull upstream main -X ours
+cd 02-Database-Fundamentals/01-SQL-Basics/01-Setup
+code .
+make
+docker volume create pgdata-0201
+cp .env.sample .env
+direnv reload
+docker run -p 5410:5432 -e POSTGRES_USER=$POSTGRES_USER -e POSTGRES_PASSWORD=$POSTGRES_PASSWORD -v pgdata-0201:/var/lib/postgresql/data postgres:15.4
+docker exec -it <YOUR_CONTAINER_NAME> /bin/bash
+docker ps
+docker exec -it 43a69b5d9b31 /bin/bash
+docker ps
+curl -L https://raw.githubusercontent.com/devrimgunduz/pagila/e1e5a855c46176bc0e17b7e8dea2f61e555fb378/pagila-schema.sql | docker exec -i 43a69b5d9b31 psql --username=$POSTGRES_USER --dbname=pagila -a -f-
+docker ps
+curl -L https://raw.githubusercontent.com/devrimgunduz/pagila/e1e5a855c46176bc0e17b7e8dea2f61e555fb378/pagila-data.sql | docker exec -i 43a69b5d9b31 psql --username=$POSTGRES_USER --dbname=pagila -a -f-
+ls
+service postgresql status 
+docker ps
+ip addr
+ip config
+hostname -I\n
+ssh -L 5410:localhost:5410 abhiv@10.132.0.2\n
+make test
+make test_rentals
+make test
+git status
+git add .
+git commit -m"chlnge 1"
+git push
+git status
+git add .
+git commit -m"chlnge 1"
+git push origin main
+gh browse
+cd ~/code/AbhishekVerma142/data-engineering-challenges/
+git status
+git pull upstream main -X ours
+cd 02-Database-Fundamentals/01-SQL-Basics/02-Querying
+code .
+make 
+cp ../01-Setup/.env .
+docker ps
+make test
